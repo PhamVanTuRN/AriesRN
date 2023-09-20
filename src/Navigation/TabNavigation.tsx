@@ -1,6 +1,6 @@
 import HomeScreen from '@/Screens/DrawerMenu/HomeScreen/HomeScreen';
 import FavoriteScreen from '@/Screens/TabScreens/FavoriteScreen';
-import OrderScreen from '@/Screens/TabScreens/OrderScreen';
+import ChatScreen from '@/Screens/TabScreens/ChatScreen';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
@@ -11,6 +11,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 // Icon.loadFont();
 import Colors from '@/Themes/Colors';
 import ProfileScreen from '@/Screens/DrawerMenu/ProfileScreen/ProfileScreen';
+import MessagesScreen from '@/Screens/TabScreens/MessagesScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -38,7 +39,7 @@ export default function HomeTabs() {
       />
       <Tab.Screen
         name="Tin nhắn"
-        component={OrderScreen}
+        component={ChatScreen}
         options={
           {
             tabBarIcon: ({color, size}) => (
@@ -60,7 +61,7 @@ export default function HomeTabs() {
       />
       <Tab.Screen
         name="Thêm"
-        component={ProfileScreen}
+        component={MessagesScreen}
         options={
           {
             tabBarIcon: ({color, size}) => (

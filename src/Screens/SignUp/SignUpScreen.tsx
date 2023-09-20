@@ -70,7 +70,7 @@ const SignUp = () => {
       keyboardShouldPersistTaps={'handled'}>
       <View style={styles.container}>
         <View style={styles.logoWrap}>
-          <Text style={styles.textNameCompany}>BOStore</Text>
+          <Text style={styles.textNameCompany}>AriesRN</Text>
           <Image style={styles.imageLogo} source={Images.imageLogo} />
         </View>
         <View style={styles.itemInputLoginWrap}>

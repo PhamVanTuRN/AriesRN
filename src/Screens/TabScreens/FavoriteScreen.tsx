@@ -1,3 +1,4 @@
+import { navigate } from '@/Navigation/NavigationAction';
 import Colors from '@/Themes/Colors';
 import Images from '@/Themes/Images';
 import React, {useState} from 'react';
@@ -37,6 +38,7 @@ export default function ProfileScreen() {
       urlImage: myUrl,
     };
     setMySearchArray([...mySearchArray, mySearchObject]);
+    navigate('MessagesScreen')
   };
   const deleteItem = (key: string) => {
     const filterData = mySearchArray.filter(item => item.key !== key);

@@ -5,11 +5,11 @@ import { navigationRef } from './NavigationAction';
 import LogInScreen from '@/Screens/LogIn/LogInScreen';
 import SignInScreen from '@/Screens/SignUp/SignUpScreen';
 import HomeDrawerNavigation from './DrawerNavigation';
-import ChooseProductScreen from '@/Screens/StartScreens/ChooseProductScreen/ChooseProductScreen';
-import MakePaymentScreen from '@/Screens/StartScreens/MakePaymentScreen/MakePaymentScreen';
 import GetYourOderScreen from '@/Screens/StartScreens/GetYourOrder/GetYourOderScreen';
 import RecoverPassword from '@/Screens/RecoverPassword/RecoverPassword';
 import ProductDetail from '@/Screens/ProductDetail/ProductDetail';
+import MessagesScreen from '@/Screens/TabScreens/MessagesScreen';
+
 const Stack = createNativeStackNavigator();
 const AuthStack = createNativeStackNavigator();
 const HomeStack = createNativeStackNavigator();
@@ -26,6 +26,7 @@ export const HomeStackNavigation = () => {
   return (
     <HomeStack.Navigator screenOptions={{ headerShown: false }}>
       <HomeStack.Screen name="HomeDrawer" component={HomeDrawerNavigation} />
+     
     </HomeStack.Navigator>
   );
 };
@@ -43,6 +44,7 @@ export default function AppNavigation() {
         <Stack.Screen name="AuthStack" component={AuthStackNavigation} />
         <Stack.Screen name="HomeStack" component={HomeStackNavigation} />
         <Stack.Screen name="ProductDetail" component={ProductDetail} />
+        <Stack.Screen name="MessagesScreen" component={MessagesScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
